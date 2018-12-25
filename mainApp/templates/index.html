@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h1>Welcome to myWeb</h1>
+<form action="add_Employee/">
+    <button type="submit">Add Employee Record</button>
+</form>
+<form action="registration/">
+    <button type="submit">Register</button>
+</form>
+    <table cellpadding="2" cellspacing="5" border="2">
+        <tr><th>Name</th><th>Employee Id</th>
+            <th>Designation</th>
+            <th>Salary</th></tr>
+        {% for i in Data %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td><a href="details/{{i.id}}">{{i.id}}</a></td>
+            <td>{{i.dsg}}</td>
+            <td>{{i.salary}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
